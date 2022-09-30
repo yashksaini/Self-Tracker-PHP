@@ -1,0 +1,122 @@
+:root {
+  --background: #4190e4;
+  --colorBtn: #407ab8;
+  --hcolorBtn: #2e6aaa;
+  --white: #fff;
+  --black: #3c3c3c;
+  --light: #b8b8b8;
+}
+.nav_bar {
+  background-color: var(--background);
+  color: var(--white);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--white);
+}
+.logo {
+  font-size: 24px;
+  font-weight: 500;
+}
+.menu_icon {
+  display: none;
+}
+.nav_links a {
+  text-decoration: none;
+  margin: 0px 12px;
+  font-size: 18px;
+  color: var(--white);
+  padding: 6px 16px;
+  border-radius: 8px;
+  transition: all 0.5s;
+}
+.nav_links a:hover {
+  background-color: var(--white);
+  color: var(--black);
+  transition: all 0.5s;
+}
+.active_nav {
+  background-color: var(--white);
+  color: var(--black) !important;
+  font-weight: 600;
+}
+#menu-toggle:checked + .navs {
+  display: block;
+}
+#menu-toggle {
+  display: none;
+}
+.all_data span {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background-color: var(--background);
+  color: var(--white);
+  margin: 12px 16px 12px 0px;
+  font-size: 16px;
+  white-space: nowrap;
+}
+.all_data span:hover {
+  cursor: pointer;
+  background-color: var(--colorBtn);
+}
+.all_data i {
+  margin-left: 8px;
+}
+.form-control {
+  padding: 12px !important;
+  border-radius: 8px !important;
+}
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+.btn-primary {
+  background-color: var(--background) !important;
+  padding: 12px;
+  font-size: 16px;
+}
+.btn-primary:hover {
+  border-color: var(--background) !important;
+}
+@media only screen and (max-width: 900px) {
+  .menu_icon {
+    display: block;
+    width: 40px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+  }
+  .navs {
+    display: none;
+  }
+  .menu_icon:hover {
+    cursor: pointer;
+  }
+  .nav_links a {
+    display: block;
+    margin: 12px 0;
+    padding: 8px 24px;
+  }
+  #menu-toggle:checked + .navs {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: -60px;
+    left: 0px;
+    z-index: 10000;
+    padding: 24px 0 0 0;
+    min-height: calc(100vh);
+    width: 100%;
+    background-color: var(--background);
+    margin-top: 120px;
+  }
+  #menu-toggle:checked + .nav_links {
+    display: block;
+  }
+}

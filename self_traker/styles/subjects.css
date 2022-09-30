@@ -1,0 +1,125 @@
+:root {
+  --background: #4190e4;
+  --colorBtn: #407ab8;
+  --hcolorBtn: #2e6aaa;
+  --white: #fff;
+  --black: #3c3c3c;
+  --light: #b8b8b8;
+  --lgreen: #00c55c;
+  --green: #009c49;
+}
+.add_box {
+  display: flex;
+  height: 50px;
+  position: relative;
+  /* background-color: red; */
+  justify-content: space-around;
+  align-items: center;
+}
+
+.add_input {
+  width: 70%;
+  height: 50px;
+  border: 1px solid var(--colorBtn);
+  padding: 0 16px;
+  font-size: 17px;
+  border-radius: 8px;
+}
+.add_input:focus {
+  outline: none;
+  border: 1px solid var(--light);
+}
+.add_box button {
+  width: 25%;
+  height: 50px;
+  border: none;
+  background-color: var(--colorBtn);
+  color: var(--white);
+  border-radius: 8px;
+}
+.add_box button:hover {
+  background-color: var(--hcolorBtn);
+}
+.card_box {
+  border: 0px solid var(--colorBtn);
+  border-radius: 8px;
+  padding: 8px;
+  position: relative;
+  background-color: #efefef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.card_box div {
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 200px;
+  border: 1px solid var(--background);
+  background-color: var(--white);
+  color: var(--background);
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card_box div span:last-child {
+  display: none;
+}
+.card_box p {
+  margin: 3px 0 0 0;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: left;
+}
+.show_active {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 15px;
+  aspect-ratio: 1;
+  border-radius: 100px;
+}
+.card_box button {
+  width: 40px;
+  margin: 0 0 4px 0;
+  padding: 0px;
+  aspect-ratio: 1;
+  font-size: 14px;
+  display: flex;
+  align-self: flex-end;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  color: var(--green);
+  border: 1px solid var(--green);
+  border-radius: 100px;
+  transition: all 0.3s;
+}
+.card_box button:hover {
+  background-color: var(--green);
+  color: var(--white);
+  transition: all 0.3s;
+}
+.card_box:hover {
+  cursor: pointer;
+}
+.card_box:hover div {
+  background-color: var(--background);
+  color: var(--white);
+}
+.card_box:hover div span:first-child {
+  display: none;
+}
+
+.card_box:hover div span:last-child {
+  font-size: 24px;
+  display: block;
+}
+.card_box div:hover {
+  transform: rotate(90deg);
+  background-color: var(--green) !important;
+  border: 1px solid var(--green) !important;
+  transition: all 0.3s;
+}
